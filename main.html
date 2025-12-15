@@ -5,17 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_circle_down" />
 </head>
 <body>
     <nav>
-        <a href="#">Welcome</a>
-        <a href="#">My Projects</a>
-        <a href="#">Games I play</a>
-        <a href="#">Reach out to me</a>
+        <div id="left">AshleshWeb</div>
+        <div id="right">
+            <a href="#" class="special-part">Welcome</a>
+            <a href="#" class="special-part">My Projects</a>
+            <a href="#" class="special-part">Games I play</a>
+            <a href="#" id="end-part">Reach out to me</a>
+        </div>
     </nav>
-    <h1>Hi! It's <span id="name">Ashlesh!</span></h1>
-    <h3>I am <span id="hobbies"><!--JS Handling--></span><span id="typing">|</span></h3>
-
+    <div id="hero">
+        <div class="hero-scale">
+            <div id="hero-left">
+                <img src="images/PFP.jpg" id="pfp">
+            </div>
+        </div>
+        <div class="hero-scale">
+            <div id="hero-right">
+                <h1 id="hero-head">Hi! I am <span id="name">Ashlesh!</span></h1>
+                <h3 id="hero-subhead">& I'm <span id="hobbies"><!--JS Handling--></span><span id="typing">|</span></h3>
+            </div>
+        </div>
+    </div>
+    <div id="prompt">
+        <div id="prompt-wrapper">
+            <span class="material-symbols-outlined">arrow_circle_down</span>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

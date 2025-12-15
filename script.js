@@ -1,5 +1,5 @@
 const hobbiesElement = document.getElementById('hobbies')
-const hobbiesList = ['a gamer', 'a frontend developer', 'a backend developer', 'a programmer', 'a heavy sleeper', 'a ambivert']
+const hobbiesList = ['a gamer', 'a programmer', 'a heavy sleeper', 'an ambivert']
 let hobbyIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
