@@ -1,0 +1,9 @@
+#typing {
+    margin-left: 2px;
+    animation: typing 1s steps(1) infinite;
+}
+@keyframes typing {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
