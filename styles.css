@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Passero+One&display=swap');
+:root{
+    --dark-blue: #2873fc;
+    --background: #91AEE3;
+}
 * {
     margin: 0;
     box-sizing: border-box;
 }
 body {
-    background: #91AEE3;
+    background: var(--background);
     font-family: 'Passero One', sans-serif;
     font-size: 20px;
+    color: white;
 }
 /*NAV*/
 #left, #right {
@@ -33,7 +38,7 @@ body {
     margin-right: 15px;
 }
 #right a:hover{
-    color: #2873fc;
+    color: var(--dark-blue);
 }
 nav {
     background: #E6F8FF;
@@ -65,7 +70,7 @@ nav {
     font-size: 32px;
 }
 #name, #hobbies {
-    color: #2873fc;
+    color: var(--dark-blue);
 }
 #pfp{
     width: 250px;
@@ -98,8 +103,101 @@ nav {
     animation: scroll-floaty 1.5s ease infinite;
 }
 #typing {
-    color: #2873fc;
+    color: var(--dark-blue);
 }
+/*BODY*/
+#about{
+    border: 1px solid red;
+}
+#focus{
+    color: var(--dark-blue);
+}
+#about-head, #song-head{
+    margin-top: 300px;
+    margin-left: 100px;
+    font-size: 57px;
+    border: 1px solid red;
+}
+#hobbies-img{
+    margin-left: 150px;
+    margin-top: 30px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    animation: hobbies-floaty 3s linear infinite;
+}
+#about-wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+    gap: 200px;
+}
+#about-right{
+    font-size: 40px;
+    margin-top: 30px;
+    margin-right: 150px
+}
+#python {
+    color: #001EFF;
+}
+#html {
+    color: #FF7B00;
+}
+#css{
+    color: #693ef9;
+}
+#js{
+    color: #f2ff00;
+}
+#song-wrapper{
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 10px;
+    border: 1px solid red;
+}
+.song-card{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 200px;
+}
+.song-card h4{
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+    color: var(--dark-blue);
+}
+.song-card h5{
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+}
+.song-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation: song-floaty 5s linear infinite;
+}
+/*#song-left{
+    font-size: 40px;
+    margin-top: 30px;
+    border: 1px solid red;
+    text-align: center;
+}
+#cover{
+    margin-top: 30px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    animation: song-floaty 5s linear infinite;
+    border: 1px solid red;
+}*/
 /*ANIMATIONS*/
 @keyframes typing {
     0% {opacity: 1;}
@@ -115,6 +213,25 @@ nav {
     }
     100% {
         transform: translateY(-5px) rotate(-10deg);
+    }
+}
+@keyframes song-floaty{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes hobbies-floaty{
+    0% {
+        transform: translateY(-10px) rotate(0deg);
+    }
+    50%{
+        transform: translateY(10px) rotate(180deg);
+    }
+    100% {
+        transform: translateY(-10px) rotate(360deg);
     }
 }
 @keyframes scroll-floaty{
