@@ -129,7 +129,7 @@ nav {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    animation: hobbies-floaty 3s linear infinite;
+    animation: hobbies-floaty 10s linear infinite;
 }
 #about-wrapper{
     display: flex;
@@ -187,23 +187,78 @@ nav {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    animation: song-floaty 5s linear infinite;
+    animation: song-floaty 15s linear infinite;
 }
-
-/*#song-left{
-    font-size: 40px;
-    margin-top: 30px;
-    border: 1px solid red;
+#lang-head{
+    margin-top: 200px;
+    font-size: 57px;
     text-align: center;
 }
-#cover{
-    margin-top: 30px;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    animation: song-floaty 5s linear infinite;
-    border: 1px solid red;
-}*/
+.lang-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: scrollAnimation both 3s ease;
+    animation-timeline: view(50%, 5%);
+}
+#lang-title{
+    font-size: 35px;
+}
+.lang-logo{
+    width: 200px;
+    height: 200px;
+}
+#css{
+    transform: scale(1.15);
+}
+#js{
+    transform: scale(1.01);
+}
+#gd{
+    width: 211.5px; 
+    height: 200px;
+    object-fit:contain;
+    margin-bottom: 2px;
+    transform: scale(1.1);
+}
+.autoshow{
+    animation: scrollAnimation both 1s ease;
+    animation-timeline: view(50% 5%);
+}
+#lang-wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+#tech-detail{
+    margin: 60px auto;
+    width: 70%;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    pointer-events: none;
+    transition: all 0.4s ease;
+}
+#tech-detail.show{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+#tech-title{
+    font-size: 28px;
+    color: var(--dark-blue);
+    margin-bottom: 15px;
+}
+#tech-text{
+    font-size: 20px;
+    color: white;
+    line-height: 1.6;
+}
 /*ANIMATIONS*/
 @keyframes typing {
     0% {opacity: 1;}
@@ -250,4 +305,18 @@ nav {
     100% {
         transform: translateY(-5px) scale(3);
     }
+}
+@keyframes scrollAnimation{
+    from {
+        opacity: 0;
+        transform: translateY(400px) scale(0.2);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+/*DEVLEOPMENT STYLES*/
+#testing{
+    margin-top: 1000px;
 }

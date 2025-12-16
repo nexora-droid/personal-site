@@ -66,3 +66,35 @@ function loadSong(){
 }
 loadSong();
 setInterval(loadSong, 1500)
+
+const techDetail = document.getElementById("tech-detail");
+const techTitle = document.getElementById("tech-title");
+const techText = document.getElementById("tech-text");
+const techData = {
+    python: {
+        title: "My joruney in Python",
+        text: "Python has played an integral part of programming life. The first time I picked up python was when I was 7 - following an course on Udemy to learn python. The course taught me turtle - one of my favourite libraries in Python, because of how cool it was. And after 7 years of abandoning Python, I remembered every single thing in python turtle. It was not long after I found Hack Club that I started writing even more programs and finally stepped outside my comfort zone! Now Python is an addiction me - something I cannot leave!"
+    },
+    html: {
+        title: "My joruney in  HTML",
+        text: "HTML - something I first touched in 6th grade - has mesmerised me every since I began it. The freedom I had when I started HTML was something very new to me for web development. The websites I built back then were amazing - at least for my skill that time - but they have been lost to corruption on the laptop which held it. Those websites may exist somewhere in the laptop, but its too far down to get back. That was what propelled me to come back into HTML, this time incorporating my skill - Python - into it."
+    },
+    css: {
+        title: "My joruney in  CSS",
+        text: "My journey with CSS is very similar to HTML. I first touched it alongside HTML, but I never knew how to make crazy looking websites. CSS used to be rather boring to me, but the life it brought is what kept me going. When I started HTML again a few years ago, I forgot CSS was a thing but the short shock is what made me delve deeper into CSS, and make my websites breathe!"
+    },
+    js: {
+        title: "My joruney in JS",
+        text: "Unlike HTML & CSS, my journey with JS is rather new. I discovered JS could be used in HTML when me and my friends were working on a project for a Hackathon, and I saw one of them use JS to hide and show a user's password. That new thing made me want to explore more, and that is what really brought me into JS! "
+    },
+    gd: {
+        title: "My joruney in GD Script",
+        text: "Similar to JS, my GDS joruney is brand new. I picked it up because of an event within Hack Club - Milkyway. I don't have much to write about it so yeah... "
+    }
+}
+function showTech(key){
+    techTitle.textContent = techData[key].title;
+    techText.textContent = techData[key].text;
+    techDetail.classList.add('show');
+    techDetail.scrollIntoView({ behavior: "smooth", block: "center" });
+}
