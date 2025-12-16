@@ -59,7 +59,7 @@ nav {
     align-self: center;
     gap: 100px;
     margin-top: 250px;
-    border: 1px solid red; /*need for developing and debugging aligment based issues*/
+    ; /*need for developing and debugging aligment based issues*/
 }
 #hero-head {
     color: white;
@@ -112,11 +112,16 @@ nav {
 #focus{
     color: var(--dark-blue);
 }
-#about-head, #song-head{
+#about-head{
     margin-top: 300px;
     margin-left: 100px;
     font-size: 57px;
     border: 1px solid red;
+}
+#song-head{
+    margin-top: 200px;
+    font-size: 57px;
+    text-align: center;
 }
 #hobbies-img{
     margin-left: 150px;
@@ -184,6 +189,7 @@ nav {
     border-radius: 50%;
     animation: song-floaty 5s linear infinite;
 }
+
 /*#song-left{
     font-size: 40px;
     margin-top: 30px;
