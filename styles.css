@@ -155,9 +155,9 @@ nav {
     overflow: hidden;
     flex-direction: row;
     justify-content: center;
-    align-items: start;
+    align-items: flex-end;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 100px;
     border: 1px solid red;
 }
 .song-card{
@@ -168,19 +168,19 @@ nav {
     max-width: 200px;
 }
 .song-card h4{
-    font-size: 24px;
+    font-size: 30px;
     text-align: center;
     margin: 0;
     color: var(--dark-blue);
 }
 .song-card h5{
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
     margin: 0;
 }
 .song-card img {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     animation: song-floaty 5s linear infinite;
 }
