@@ -240,14 +240,18 @@ nav {
     border-radius: 20px;
     text-align: center;
     opacity: 0;
-    transform: translateY(30px);
+    transform: scale(0.6);
     pointer-events: none;
-    transition: all 0.4s ease;
 }
 #tech-detail.show{
     opacity: 1;
-    transform: translateY(0);
+    transform: scale(1);
     pointer-events: auto;
+    animation: techzoom 0.5s cubic-bezier(0.2, 0.9, 0.3, 1) forwards;
+}
+#tech-detail.close{
+    pointer-events: auto;
+    animation: techclose 0.35s ease;
 }
 #tech-title{
     font-size: 28px;
@@ -314,6 +318,26 @@ nav {
     to{
         opacity: 1;
         transform: translateY(0) scale(1);
+    }
+}
+@keyframes techzoom{
+    from {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes techclose{
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.6);
     }
 }
 /*DEVLEOPMENT STYLES*/

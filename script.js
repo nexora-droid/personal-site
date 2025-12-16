@@ -1,5 +1,5 @@
 const hobbiesElement = document.getElementById('hobbies')
-const hobbiesList = ['a gamer', 'a programmer', 'a heavy sleeper', 'an ambivert']
+const hobbiesList = ['a gamer', 'a programmer', 'a reader', 'an ambivert']
 let hobbyIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -92,9 +92,38 @@ const techData = {
         text: "Similar to JS, my GDS joruney is brand new. I picked it up because of an event within Hack Club - Milkyway. I don't have much to write about it so yeah... "
     }
 }
-function showTech(key){
+let currentTech = null;
+let isAnimating = false;
+function showTech(key, card){
+    if (isAnimating) return;
+    if (currentTech === key){
+        techDetail.classList.remove('show');
+        techDetail.classList.add('close');
+        techDetail.addEventListener("animationend", () => {
+            techDetail.classList.remove("close");
+            isAnimating = false;
+        }, { once: true });
+
+        currentTech = null;
+        return;
+    }
+    currentTech = key;
+    isAnimating = true;
     techTitle.textContent = techData[key].title;
     techText.textContent = techData[key].text;
+    const cardRect = card.getBoundingClientRect();
+    const detailRect = techDetail.getBoundingClientRect();
+    const originX = cardRect.left + cardRect.width / 2 - detailRect.left;
+    const originY = cardRect.top + cardRect.height / 2 - detailRect.top;
+    techDetail.style.transformOrigin = `${originX}px ${originY}px`;
+    
+    techDetail.classList.remove('show', 'close');
+    techDetail.style.animation = "none";
+    void techDetail.offsetWidth;
     techDetail.classList.add('show');
+    techDetail.style.animation = "";
+    techDetail.addEventListener("animationend", () => {
+        isAnimating = false;
+    }, { once: true });
     techDetail.scrollIntoView({ behavior: "smooth", block: "center" });
 }
