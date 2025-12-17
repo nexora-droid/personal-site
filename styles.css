@@ -47,6 +47,9 @@ nav {
     justify-content: space-between;
     color: black;
 }
+#right a.current {
+    color: var(--dark-blue);
+}
 /*HERO*/
 #typing {
     margin-left: 2px;
@@ -59,7 +62,6 @@ nav {
     align-self: center;
     gap: 100px;
     margin-top: 250px;
-    ; /*need for developing and debugging aligment based issues*/
 }
 #hero-head {
     color: white;

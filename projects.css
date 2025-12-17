@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Passero+One&display=swap');
+:root{
+    --dark-blue: #2873fc;
+    --darker-blue: #215bc7;
+    --background: #91AEE3;
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background: var(--background);
+    font-family: 'Passero One', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+/*NAV*/
+#left, #right {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#left {
+    margin-left: 15px;
+}
+#right {
+    display: flex;
+    flex-direction: row;
+}
+#right a{
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.special-part {
+    margin-right: 53px;
+}
+#end-part{
+    margin-right: 15px;
+}
+#right a:hover{
+    color: var(--dark-blue);
+}
+nav {
+    background: #E6F8FF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: black;
+}
+#right a.current {
+    color: var(--dark-blue);
+}
+/*BODY*/
+#projects-title{
+    font-size: 56px;
+    text-align: center;
+    margin-top: 30px;
+    animation: pop 5s steps(30) infinite;
+    color: var(--darker-blue);
+}
+.project-title{
+    font-size: 30px;
+    color: var(--dark-blue);
+    word-wrap: normal;
+}
+.project-card{
+    position: relative;
+    border: 3px solid var(--dark-blue);
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    padding: 15px 20px;
+    margin: 10px;
+    transition: all 0.3s ease;
+    background-color: #E6F8FF; 
+    max-width: 375px;
+    max-height: 200px;
+    min-width: 375px;
+    min-height: 100px;
+    overflow: hidden;
+}
+.project-card::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -30%;
+    width: 80px;
+    height: 100%;
+    background: linear-gradient(130deg, transparent, rgba(255, 255, 255, 0.1) 35%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.1) 65%, transparent);
+    transform: skewX(-15deg);
+    filter: blur(2px);
+}
+.project-card:hover::after{
+    animation: shine 0.6s ease-out;
+}
+.project-card:hover{
+    transform: scale(1.1);
+}
+#projects-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 50px;
+}
+.project-text{
+    color: black;
+    word-wrap: normal;
+}
+.git-link{
+    cursor: crosshair;
+}
+#special-card{
+    border: 3px solid purple;
+}
+#special-title{
+    color: purple;
+}
+#special-text{
+    font-style: italic;
+}
+/* ANIMATIONS */
+@keyframes shine {
+    from { 
+        left: -30%; 
+    }
+    to { 
+        left: 120%; 
+    }
+}
