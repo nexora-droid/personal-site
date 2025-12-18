@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Journey || AshleshWeb</title>
+    <link rel="stylesheet" href="journey.css">
+</head>
+<body>
+    <nav>
+        <div id="left">AshleshWeb</div>
+        <div id="right">
+            <a href="index.html" class="special-part">Welcome</a>
+            <a href="projects.html" class="special-part">My Projects</a>
+            <a href="#" id="end-part" class="current">My Programming Journey</a>
+        </div>
+    </nav>
+    <h1 id="journey-title">My Programming Journey</h1>
+    <div class="popup-overlay" id="popup-overlay"></div>
+    <section class="journey">
+        <svg class="timeline" viewBox="0 0 600 1200">
+            <path d="M300 50 C100 200, 500 400, 300 600 C100 800, 500 1000, 300 1150" fill="none" stroke="#2873fc" stroke-width="4"/>
+            <circle cx="300" cy="50" r="5" class="node" data-id="1"/>
+            <circle cx="297" cy="300" r="5" class="node" data-id="2"/>
+            <circle cx="338" cy="550" r="5" class="node" data-id="3"/>
+            <circle cx="278" cy="850" r="5" class="node" data-id="4"/>
+            <circle cx="300" cy="1150" r="5" class="node" data-id="5"/>
+        </svg>
+        <div class="popup" id="popup"></div>
+    </section>
+    <script src="journey.js"></script>
+</body>
+</html>
