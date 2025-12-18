@@ -95,7 +95,6 @@ nav {
 #prompt{
     display: flex;
     justify-content: center;
-    border: 1px solid red;
     margin-top: 100px;
     color: white;
 }
@@ -108,9 +107,6 @@ nav {
     color: var(--dark-blue);
 }
 /*BODY*/
-#about{
-    border: 1px solid red;
-}
 #focus{
     color: var(--dark-blue);
 }
@@ -118,7 +114,6 @@ nav {
     margin-top: 300px;
     margin-left: 100px;
     font-size: 57px;
-    border: 1px solid red;
 }
 #song-head{
     margin-top: 200px;
@@ -165,7 +160,6 @@ nav {
     align-items: flex-end;
     flex-wrap: wrap;
     gap: 100px;
-    border: 1px solid red;
 }
 .song-card{
     display: flex;
