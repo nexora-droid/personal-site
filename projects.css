@@ -122,6 +122,13 @@ nav {
 #special-text{
     font-style: italic;
 }
+#page-content{
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: scale(1.05);
+}
 /* ANIMATIONS */
 @keyframes shine {
     from { 
